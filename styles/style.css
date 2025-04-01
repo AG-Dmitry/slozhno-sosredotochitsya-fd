@@ -1,5 +1,179 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
+  background-image: var(--background-image, url(../images/cover-image-dark.png));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title-decor {
+  background-color: var(--color-accent, rgb(255 0 112));
+}
+
+.decorated-zone {
+  position: relative;
+  min-height: 100lvh;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: var(--margin-side, 10px);
+  right: var(--margin-side, 10px);
+  border-top: 1px solid var(--color-accent-alternative, rgb(255 0 112));
+  border-right: 1px solid var(--color-accent-alternative, rgb(255 0 112));
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: var(--margin-side, 10px);
+  left: var(--margin-side, 10px);
+  border-bottom: 1px solid var(--color-accent-alternative, rgb(255 0 112));
+  border-left: 1px solid var(--color-accent-alternative, rgb(255 0 112));
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.link {
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-shadow: var(--text-shadow-link, 2px 1px 0 var(--color-accent));
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--color-text, rgb(241 178 206));
+}
+
+.link:active {
+  border: 1px solid var(--color-text, rgb(241 178 206));
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: var(--margin-side, 10px);
+}
+
+.header__decor {
+  position: absolute;
+  top: var(--margin-side, 10px);
+  right: calc(var(--margin-side, 10px) + 9px);
+  display: var(--decor-display, flex);
+  align-items: center;
+  gap: 10px;
+  color: var(--color-accent-alternative, rgb(255 0 112));
+  line-height: var(--line-height-decor, 138.9%);
+  text-transform: var(--text-transform-decor, uppercase);
+}
+
+.header__decor::after {
+  content: '';
+  border-radius: 50%;
+  box-shadow: var(--decor-shadow, 0 0 4px 2px var(--color-accent));
+  background-color: var(--color-accent-alternative, rgb(255 0 112));
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__theme-menu {
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding-bottom: 4px;
+  color: var(--color-accent-alternative, rgb(255 0 112));
+  line-height: var(--line-height-button, 100%);
+  background-color: transparent;
+  cursor: pointer;
+  inline-size: 70px;
+  block-size: 26px;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid currentColor;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-accent-alternative-thin, rgb(255 0 112 / 0.4));
+}
+
+.header__theme-menu-button:disabled {
+  border: 1px solid currentColor;
+  cursor: auto;
+}
+
+.header__title {
+  align-self: center;
+  text-shadow: var(--text-shadow-header, 4px 4px 0 var(--color-accent));
+}
+
+.header__text {
+  align-self: center;
+  color: var(--color-subheader, rgb(0 0 40));
+  font-weight: var(--font-weight-bold);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-main, 50px);
+  margin: var(--margin-main, 40px) var(--margin-side, 10px);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-section, 20px);
+}
+
+.section_pictures {
+  gap: var(--margin-side, 10px);
+}
+
+.section__gallery-header {
+  color: var(--color-subheader, rgb(0 0 40));
+  background-color: var(--color-accent, rgb(255 0 112));
+}
+
+.section__gallery-header-image {
+  inline-size: 100%;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-article, 10px);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  color: var(--color-header, rgb(219 0 255));
+  font-size: var(--font-size-header-mobile, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
+  line-height: var(--line-height-header, 82.5%);
+  text-shadow: var(--text-shadow-footer, 2px 2px 0 var(--color-accent));
 }

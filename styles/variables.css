@@ -2,3 +2,51 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+
+/* переменные цвета */
+
+  --color-background: rgb(0 0 40);
+  --color-text: rgb(241 178 206);
+  --color-accent: rgb(255 0 112);
+  --color-header: rgb(219 0 255);
+  --color-subheader: var(--color-background, rgb(0 0 40));
+  --color-accent-alternative: var(--color-accent, rgb(255 0 112));
+  --color-accent-alternative-thin: rgb(255 0 112 / 0.4);
+
+/* переменные шрифта */
+
+  --font-family-global: 'IBM Plex mono', sans-serif;
+  --font-size-header-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-header-desktop-tablet: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --font-size-text: 18px;
+  --line-height-header: 82.5%;
+  --line-height-text: 130%;
+  --line-height-button: 100%;
+  --line-height-decor: 138.9%;
+  --font-weight-regular: normal;
+  --font-weight-bold: bold;
+  --text-transform-decor: uppercase;
+  --text-shadow-header: 4px 4px 0 var(--color-accent);
+  --text-shadow-link: 2px 1px 0 var(--color-accent);
+  --text-shadow-footer: 2px 2px 0 var(--color-accent);
+  --decor-shadow: 0 0 4px 2px var(--color-accent);
+
+  /* переменные отсупов */
+
+  --margin-side: 10px;
+  --margin-main: 40px;
+  --gap-main: 50px;
+  --gap-section: 20px;
+  --gap-article: 10px;
+
+  /* переменные отображения элементов */
+
+  --decor-display: flex;
+  
+  /* переменные изображений */
+
+  --background-image: url(../images/cover-image-dark.png);
+  
+}
