@@ -13,8 +13,9 @@
   grid-column-end: 4;
 }
 
-.narrow-content {
-  grid-row-start: 2;
+.narrow-header {
+  grid-column-start: span 3;
+  inline-size: calc((100% - var(--gap-section) * 2) / 3);
 }
 
 .high-header {

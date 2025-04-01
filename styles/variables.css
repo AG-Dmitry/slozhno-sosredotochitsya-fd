@@ -10,14 +10,14 @@
   --color-background: rgb(0 0 40);
   --color-text: rgb(241 178 206);
   --color-accent: rgb(255 0 112);
+  --color-accent-alternative: var(--color-background, rgb(0 0 40));
   --color-header: rgb(219 0 255);
-  --color-subheader: var(--color-background, rgb(0 0 40));
-  --color-accent-alternative: var(--color-accent, rgb(255 0 112));
-  --color-accent-alternative-thin: rgb(255 0 112 / 0.4);
+  --color-subheader: var(--color-accent, rgb(255 0 112));
+  --color-subheader-thin: rgb(255 0 112 / 0.4);
 
 /* переменные шрифта */
 
-  --font-family-global: 'IBM Plex mono', sans-serif;
+  --font-family-global: 'IBM Plex mono', monospace, sans-serif;
   --font-size-header-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-size-header-desktop-tablet: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-size-text: 18px;

@@ -20,9 +20,10 @@ h5,
 h6,
 p,
 a,
+button,
 li {
   margin: 0;
-  font-family: var(--font-family-global, 'IBM Plex mono', sans-serif);
+  font-family: var(--font-family-global, 'IBM Plex mono', monospace, sans-serif);
 }
 
 ul {
@@ -38,30 +39,14 @@ picture {
 
 h1 {
   color: var(--color-header, rgb(219 0 255));
-  font-weight: var(--font-weight-bold, bold);
   font-size: var(--font-size-header-mobile, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   line-height: var(--line-height-header, 82.5%);
 }
 
-h2 {
-  color: var(--color-accent-alternative, rgb(255 0 112));
-  font-weight: var(--font-weight-bold, bold);
-  font-size: var(--font-size-text, 18px);
-  line-height: var(--line-height-text, 130%);
-}
-
-h3 {
-  color: var(--color-subheader, rgb(0 0 40));
-  font-weight: var(--font-weight-bold, bold);
-  font-size: var(--font-size-text, 18px);
-  line-height: var(--line-height-text, 130%);
-}
-
+h2,
+h3,
 h4 {
-  color: var(--color-subheader, rgb(0 0 40));
-  font-weight: var(--font-weight-regular, normal);
-  font-size: var(--font-size-text, 18px);
-  line-height: var(--line-height-text, 130%);
+  color: var(--color-subheader, rgb(255 0 112));
 }
 
 p,
@@ -69,7 +54,29 @@ a,
 button,
 li {
   color: var(--color-text, rgb(241 178 206));
-  font-weight: var(--font-weight-regular, normal);
+}
+
+h2,
+h3,
+h4,
+p,
+a,
+button,
+li {
   font-size: var(--font-size-text, 18px);
   line-height: var(--line-height-text, 130%);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-weight-bold, bold);
+}
+
+h4,
+p,
+a,
+button,
+li {
+  font-weight: var(--font-weight-regular, normal);
 }
