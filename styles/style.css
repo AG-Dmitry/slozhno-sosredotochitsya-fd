@@ -18,7 +18,7 @@
 
 .decorated-zone {
   position: relative;
-  min-height: 100lvh;
+  min-height: max(100lvh, 668px);
 }
 
 .decorated-zone::before {
@@ -128,8 +128,11 @@
   text-shadow: var(--text-shadow-header, 4px 4px 0 var(--color-accent));
 }
 
-.header__text {
+.header__text-block {
   align-self: center;
+}
+
+.header__text {
   color: var(--color-subheader, rgb(0 0 40));
   font-weight: var(--font-weight-bold);
 }

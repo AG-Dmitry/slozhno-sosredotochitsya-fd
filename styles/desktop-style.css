@@ -4,6 +4,10 @@
   --gap-main: 80px;
 }
 
+.decorated-zone {
+  min-height: max(100lvh, 768px);
+}
+
 .wide-content {
   grid-column-start: 2;
   grid-column-end: 4;
@@ -40,7 +44,7 @@
   font-size: var(--font-size-header-desktop-tablet, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
 }
 
-.header__text {
+.header__text-block {
   grid-area: 3 / 3 / 4 / 2;
   margin-left: calc(var(--margin-side, 10px) / 2);
 }
